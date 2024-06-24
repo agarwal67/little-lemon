@@ -13,3 +13,6 @@ class Menu(models.Model):
     Title = models.CharField(max_length=255, blank=False)
     Price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     Inventory = models.DecimalField(max_digits=5, decimal_places=0, default=0)
+
+    def __str__(self):
+        return f"{self.Title} : {str(self.Price)}"
